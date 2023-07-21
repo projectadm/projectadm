@@ -30,6 +30,54 @@
 		    	color:white;
 		    }
 	  </style>
+	  <script>
+		// JavaScript to handle automatic scrolling
+function scrollToTop() {
+    const currentScroll = window.scrollY;
+    const step = 10; // Adjust the step size for slower or faster scrolling
+
+    if (currentScroll > pageHeight + windowHeight) {
+        window.scrollTo(0, currentScroll - step);
+        setTimeout(scrollToTop, 10); // Adjust the delay (in milliseconds) for slower or faster scrolling
+    }
+}
+
+function scrollToBottom() {
+    const windowHeight = window.innerHeight;
+    const pageHeight = document.body.scrollHeight;
+    const currentScroll = window.scrollY;
+    const step = 10; // Adjust the step size for slower or faster scrolling
+
+    if (currentScroll < pageHeight - windowHeight) {
+        window.scrollTo(0, currentScroll + step);
+        setTimeout(scrollToBottom, 500); // Adjust the delay (in milliseconds) for slower or faster scrolling
+    }
+}
+
+const duration = 10000; // Set the duration in milliseconds (30 seconds)
+
+function scrollPageUpAndDown() {
+    const currentScroll = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const pageHeight = document.body.scrollHeight;
+    const maxScroll = pageHeight - windowHeight;
+	setTimeout(function () {
+    window.location.href = "index.html";
+}, 50000);
+
+    if (currentScroll >= maxScroll) {
+        scrollToTop();
+    } else {
+        scrollToBottom();
+    }
+}
+
+// Scroll the page up and down every 'duration' milliseconds
+setInterval(scrollPageUpAndDown, duration);
+
+
+
+	  </script>
     </head>
     <body>
   	 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -46,26 +94,30 @@
 		  </div> 
 	  </nav>
      <!-- END nav -->
-     <div id="index">
-     <section class="home-slider owl-carousel img">
-      <div class="slider-item" style="background-image: url(https://wallpapercave.com/dwp2x/wp2345362.png);">
-      	<div class="overlay"></div>
+<div id="index">
+     <section class="ftco-section"   style="background-image: url(https://wallpapercave.com/dwp2x/wp2345362.png); width: auto;height: 800px;">
+      
+     
         <div class="container">
-       <br>
-	   <br>
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-         	     <span class="subheading">Welcome</span>
-                 <h1 class="mb-4">ADVANCE DEFENCE MECHANISM</h1>
-                 <p class="mb-4 mb-md-5 white">It is a software to block/prevent from highly weaponize hardware hacking devices like USB rubber ducky and Bash bunny</p>
-            <p><a href="#about" class="btn btn-primary p-3 px-xl-4 py-xl-3">KNOW MORE</a></p>
+       
+            <div class="col-md-7 col-sm-12  ftco-animate">
+         	     <span class="subheading"> &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp;Welcome</span>
+                 <h1 class="mb-4">ADVANCE DEFENCE   &nbsp;&emsp; &emsp; &emsp; &emsp; &emsp;MECHANISM</h1>
+                 <p class="mb-4 mb-md-5 white">It is a software to block/prevent from highly weaponize hardware hacking <br> deviceslike 
+					USB rubber ducky and Bash bunny</p>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#about" class="btn btn-primary p-3 px-xl-4 py-xl-3">KNOW MORE</a></p>
             </div>
           </div>
-        </div>
-      </div>
+       
     </section>
 </div>
-<div id="about"> 
-    <section class="ftco-about d-md-flex"> 
+
+	<div id="about">
+		<br>
+		<br>
+		<br>
+    <section class="ftco-about d-md-flex" > 
+		<br><br>
     	<div class="one-half img" style="background-image: url(images/about.png);"></div>
     	<div class="one-half ftco-animate">
         <div class="heading-section ftco-animate ">
@@ -85,21 +137,16 @@
 					Registry Editor was blocked also for administrator. (i.e Security Reasons)</p>
     	</div>
     </section>
-</div> 
+	</div>
+
 <div id="services">
       <section class="ftco-section">
-    	<div class="container">
-    	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-               <h2 class="mb-4">WHAT WE DONE</h2>   
-          </div>
-        </div>
-    	</div>
+    	
     	<div class="container-wrap">
     		<div class="row no-gutters d-flex">
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeIFNe9ZHNhVw4jMmb8C7aPgk_9iFQUxyGLryHlnx8X6YKE025YWNBaapXXMuN3QNfsKo&usqp=CAU); background-size: 200PX 300PX;"></a>
+    					<a href="#" class="img" style="background-image: url(https://i.pinimg.com/originals/44/be/24/44be2433f06f6b0d5660203727d6e2ef.gif); background-size: 200PX 300PX;"></a>
     					<div class="text p-4">
     						
 							<H4>USER AGREEMENT</H4>
@@ -110,7 +157,7 @@
     			</div>
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4jzCbj8U4MUZywovfBOviE13OIeBPxklXHQ&usqp=CAU); background-size: 200PX 300PX;"></a>
+    					<a href="#" class="img" style="background-image: url(https://i.pinimg.com/originals/1a/4a/ba/1a4abaa75744981df64291b721d80d42.gif); background-size: 200PX 300PX;"></a>
     					<div class="text p-4">
     						
 							<H4>SPLASH SCREEN & LOGIN MODULE</H4>
@@ -121,7 +168,7 @@
     			</div>
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img" style="background-image: url(https://www.powerschool.com/wp-content/uploads/2022/01/better-decisions-with-real-time-dashboards-for-k-12-finance-leaders-blog-thumbnail-121021.jpg); background-size: 200PX 300PX;"></a>
+    					<a href="#" class="img" style="background-image: url(https://images.squarespace-cdn.com/content/v1/55ed989ee4b0c7f115ddc924/1541600620919-VEI2IOYGNT2WJXA2W4A0/ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI6FXy8c9PWtBlqAVlUS5izpdcIXDZqDYvprRqZ29Pw0o/analytics.gif); background-size: 200PX 300PX;"></a>
     					<div class="text p-4">
     					
 							<H4>ADM DASHBOARD</H4>
@@ -137,7 +184,7 @@
 
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img order-lg-last" style="background-image: url(https://cdn-icons-png.flaticon.com/512/4345/4345839.png); background-size: 200PX 300PX;"></a>
+    					<a href="#" class="img order-lg-last" style="background-image: url(https://videosgifs.net/wp-content/uploads/2020/07/por-favor-conecta-el-usb.gif); background-size: 200PX 300PX;"></a>
     					<div class="text p-4">
 						
 							  <H4>USB BLOCKER MODULE</H4>
@@ -148,7 +195,7 @@
     			</div>
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img order-lg-last" style="background-image: url(https://kinsta.com/wp-content/uploads/2021/12/mac-hosts-file-1-1024x512.png); background-size: 200PX 300PX;"></a>
+    					<a href="#" class="img order-lg-last" style="background-image: url(https://www.netspaceindia.com/wp-content/uploads/2020/04/vpn-small.gif); background-size: 200PX 300PX;"></a>
     					<div class="text p-4">
     						
 							  <H4>HOST FILE EDITOR</H4>
@@ -158,7 +205,7 @@
     			</div>
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img order-lg-last" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzu4OA0vZT7ZGDDrnEtql-t_UeRMdBlHZiMoaMkgOk7a63ffiQSdcskUzWCJRxUqPB4Z8&usqp=CAU);background-size: 200PX 300PX;"></a>
+    					<a href="#" class="img order-lg-last" style="background-image: url(https://miro.medium.com/v2/resize:fit:679/1*MRRfEdAvjN9bC2ng-VIVFA.gif);background-size: 200PX 300PX;"></a>
     					<div class="text p-4">
 						
 						    	<H4>UAC CHANGER</H4>
